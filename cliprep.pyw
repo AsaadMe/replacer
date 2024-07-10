@@ -11,7 +11,7 @@ import os
 replace_with = ','
 def on_activate():
     try:
-        pyautogui.hotkey('ctrl', 'c')
+        pyautogui.hotkey('ctrl', 'c') # not working
         pyautogui.sleep(0.1)
         text = pyperclip.paste()
         modified_text = text.replace(' ', replace_with)
@@ -37,9 +37,7 @@ def run(*arg):
 
 
 def on_clicked(icon, item):
-    if str(item) =="DO":
-        print("DID")
-    elif str(item) == "Exit":
+    if str(item) == "Exit":
         icon.visible = False
         icon.stop()
         os._exit(0)
@@ -57,7 +55,7 @@ def background_task():
 
 
     icon = pystray.Icon("Clipboard Replacer", image, menu=pystray.Menu(
-        pystray.MenuItem('Replace with?', lambda *args: threading.Thread(target=get_input).start()),
+        pystray.MenuItem('Set Replacement', lambda *args: threading.Thread(target=get_input).start()),
         pystray.MenuItem("Exit", on_clicked)
     ))
 
