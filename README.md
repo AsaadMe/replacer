@@ -6,5 +6,5 @@ A Python script that runs in the background (minimized in system tray) on Window
 
 - Install requirements
 - Execute `cliprep.pyw`
-- Press `Alt+','`
+- Select text then Press `Alt+','`
 - Right click on system tray icon to change `','` char or to Exit
