@@ -11,8 +11,8 @@ import os
 replace_with = ','
 def on_activate():
     try:
-        pyautogui.hotkey('ctrl', 'c') # not working
-        pyautogui.sleep(0.1)
+        pyautogui.sleep(0.5)
+        pyautogui.hotkey('ctrl', 'c')
         text = pyperclip.paste()
         modified_text = text.replace(' ', replace_with)
         pyperclip.copy(modified_text)
