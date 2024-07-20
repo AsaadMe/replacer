@@ -22,8 +22,8 @@ class DualInputDialog(simpledialog.Dialog):
         super().__init__(parent, title)
     
     def body(self, master):
-        tk.Label(master, text="String you want to replace:").grid(row=0)
-        tk.Label(master, text="Change with:").grid(row=1)
+        tk.Label(master, text="String you want to replace:").grid(row=0, column=0, sticky=tk.W)
+        tk.Label(master, text="Change with:").grid(row=1, column=0, sticky=tk.W)
 
         self.old_substring_entry = tk.Entry(master)
         self.new_substring_entry = tk.Entry(master)
